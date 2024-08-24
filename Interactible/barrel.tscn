@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8o5syh7qu85"]
+
+[ext_resource type="Script" path="res://Scripts/Interactible/barrel.gd" id="1_adbhl"]
+[ext_resource type="Texture2D" uid="uid://curmhjuohdrou" path="res://Treasure Hunters/Pirate Ship/Sprites/Decorations/Barrels and Bottles/01.png" id="1_qx7x5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw7me"]
+size = Vector2(22, 21)
+
+[node name="Barrel" type="Node2D"]
+script = ExtResource("1_adbhl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_vw7me")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_qx7x5")
